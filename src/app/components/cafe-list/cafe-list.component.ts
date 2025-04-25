@@ -29,4 +29,12 @@ export class CafeListComponent implements OnInit {
       }
     );
   }
+
+  getTotalOrigen(): number {
+    return this.cafes.filter(cafe => cafe.tipo === 'Café de Origen').length;
+  }
+
+  getTotalBlend(): number {
+    return this.cafes.filter(cafe => cafe.tipo === 'Blend').length;
+  }
 }
