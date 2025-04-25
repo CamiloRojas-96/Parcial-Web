@@ -1,1 +1,23 @@
-<p>cafe-list works!</p>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Variedades de Café</h1>
+    <div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Región</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cafe of cafes; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ cafe.nombre }}</td>
+            <td>{{ cafe.tipo }}</td>
+            <td>{{ cafe.region }}</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
